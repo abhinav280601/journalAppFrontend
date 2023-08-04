@@ -69,33 +69,33 @@ export default function ActionAreaCard({
   const handleDelete = async (journalId) => {
     console.log("delete");
     const id = journalId;
-    // try {
-    const token = localStorage.getItem("accesstoken");
-    if (!token) {
-      console.error("No JWT token found.");
-      return;
-    }
-    await fetch("https://journalapptest.onrender.com/journals/" + id, {
-      method: "DELETE",
-      mode: "cors",
-
-      headers: {
-        "Content-Type": "application/json",
-        Authorization: `${token}`,
-      },
-      body: JSON.stringify({
-        title: title,
-      }),
-    }).then((res) => {
-      if (!res.ok) {
-        throw new Error("Journal not deleted");
+    try {
+      const token = localStorage.getItem("accesstoken");
+      if (!token) {
+        console.error("No JWT token found.");
+        return;
       }
-    });
-    alert("Journal deleted");
-    window.location.reload();
-    // } catch (error) {
-    //   console.error(error);
-    // }
+      await fetch("https://journalapptest.onrender.com/journals/" + id, {
+        method: "DELETE",
+        mode: "cors",
+
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `${token}`,
+        },
+        body: JSON.stringify({
+          title: title,
+        }),
+      }).then((res) => {
+        if (!res.ok) {
+          throw new Error("Journal not deleted");
+        }
+      });
+      alert("Journal deleted");
+      window.location.reload();
+    } catch (error) {
+      console.error(error);
+    }
   };
 
   console.log(image);
