@@ -1,0 +1,21 @@
+/* .card {
+  background-color: #37393b;
+}
+.description_text {
+  color: #333333;
+} */
+
+.options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-right: 2vh;
+}
+.update_delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  padding-right: 2vh;
+}

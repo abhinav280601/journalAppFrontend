@@ -1,0 +1,46 @@
+.mainc {
+  margin: 5vh 7vh;
+  display: grid;
+  grid-template-columns: 1.5fr 2fr;
+  gap: 50px;
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+  row-gap: 5vh;
+}
+.head {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+
+.create {
+}
+.publish {
+  position: relative;
+  left: 1%;
+}
+.journals {
+  position: relative;
+  left: 5%;
+  max-height: 70vh;
+  overflow-y: auto;
+}
+.journals::-webkit-scrollbar {
+  display: none;
+}
+.head_publish {
+  text-align: center;
+  margin-bottom: 5vh;
+}
+.btn {
+  margin-top: 30px;
+}
+.sel_publish {
+  justify-content: space-between;
+}
+.publish_select {
+  width: 70%;
+}
